@@ -30,5 +30,3 @@ class Mamifero(Animal):
         self._patas = patas
     def getListado(cls):
         return cls._listado
-    
-

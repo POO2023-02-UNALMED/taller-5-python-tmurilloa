@@ -18,4 +18,3 @@ class Zona:
         self._zoo = zoo
     def getAnimales(cls):
         return cls._animales
-
