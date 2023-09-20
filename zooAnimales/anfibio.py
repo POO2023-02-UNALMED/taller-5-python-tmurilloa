@@ -9,14 +9,17 @@ class Anfibio(Animal):
         self._venenoso = venenoso
         Anfibio._listado.append(self)
     
+    @classmethod
     def cantidaAnfibios(cls):
         return len(cls._listado)
     def movimiento(self):
         return "saltar"
+    @classmethod
     def crearRana(cls,nombre,edad,genero):
         rana = Anfibio(nombre,edad,"selva",genero,"rojo",True)
         cls.ranas += 1
         return rana
+    @classmethod
     def crearSalamandras(cls,nombre,edad,genero):
         salamandra = Anfibio(nombre,edad,"selva",genero,"negro y amarillo",False)
         cls.ranas += 1

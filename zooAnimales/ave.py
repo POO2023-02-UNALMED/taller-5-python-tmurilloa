@@ -8,6 +8,7 @@ class Ave(Animal):
         self._colorPlumas = colorPlumas
         Ave._listado.append(self)
 
+    @classmethod
     def cantidadAves(cls):
         return len(cls._listado)
     def movimiento(self):

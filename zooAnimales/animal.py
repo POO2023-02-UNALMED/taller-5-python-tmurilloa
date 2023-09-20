@@ -1,8 +1,8 @@
-from mamifero import Mamifero
-from ave import Ave
-from reptil import Reptil
-from pez import Pez
-from anfibio import Anfibio
+from mamifero import cantidadMamiferos
+from ave import cantidadAves
+from anfibio import cantidadAnfibios
+from reptil import cantidadReptiles
+from pez import cantidadPeces
 class Animal:
     _totalAnimales = 0
     def __init__(self,nombre,edad,habitat,genero):
@@ -21,7 +21,7 @@ class Animal:
             resultado += f", la zona en la que me ubico es {self._zona}, en el {self._zona.getZoo()}"
         return resultado
     def totalPorTipo(self):
-        resultado = f"Mamiferos: {Mamifero.cantidadMamiferos()}\nAves: {Ave.cantidadAves()}\nReptiles: {Reptil.cantidadReptiles()}\nPeces: {Pez.cantidadPeces()}\nAnfibios: {Anfibio.cantidadAnfibios()}"
+        resultado = f"Mamiferos: {cantidadMamiferos()}\nAves: {cantidadAves()}\nReptiles: {cantidadReptiles()}\nPeces: {cantidadPeces()}\nAnfibios: {cantidadAnfibios()}"
         return resultado
     
     def getNombre(self):
