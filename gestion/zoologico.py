@@ -1,9 +1,11 @@
+
 class Zoologico:
     _zonas = []
     def __init__(self,nombre,ubicacion):
         self._nombre = nombre
         self._ubicacion = ubicacion
 
+    @classmethod
     def agregarZonas(cls,zona):
         cls._zonas.append(zona) 
     
@@ -24,3 +26,4 @@ class Zoologico:
         self._ubicacion = ubicacion
     def getZona(cls):
         return cls._zonas
+
