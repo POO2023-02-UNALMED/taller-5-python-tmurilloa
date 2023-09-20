@@ -11,18 +11,18 @@ class Animal:
     
     def movimiento(self):
         return "desplazarse"
-    def __str__(self):
+    def toString(self):
         resultado = f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}"
         if self._zona != None:
             resultado += f", la zona en la que me ubico es {self._zona}, en el {self._zona.getZoo()}"
         return resultado
     @classmethod
     def totalPorTipo(cls):
-        from mamifero import cantidadMamiferos
-        from ave import cantidadAves
-        from anfibio import cantidadAnfibios
-        from reptil import cantidadReptiles
-        from pez import cantidadPeces   
+        from .mamifero import cantidadMamiferos
+        from .ave import cantidadAves
+        from .anfibio import cantidadAnfibios
+        from .reptil import cantidadReptiles
+        from .pez import cantidadPeces   
         resultado = f"Mamiferos: {cantidadMamiferos()}\nAves: {cantidadAves()}\nReptiles: {cantidadReptiles()}\nPeces: {cantidadPeces()}\nAnfibios: {cantidadAnfibios()}"
         return resultado
     
