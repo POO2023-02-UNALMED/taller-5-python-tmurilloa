@@ -23,7 +23,7 @@ class Mamifero(Animal):
         cls.leones += 1
         return leon
     
-    def getPelaje(self):
+    def isPelaje(self):
         return self._pelaje
     def setPelaje(self,pelaje):
         self._pelaje = pelaje

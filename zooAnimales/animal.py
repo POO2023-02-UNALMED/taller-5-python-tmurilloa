@@ -16,7 +16,8 @@ class Animal:
         if self._zona != None:
             resultado += f", la zona en la que me ubico es {self._zona}, en el {self._zona.getZoo()}"
         return resultado
-    def totalPorTipo(self):
+    @classmethod
+    def totalPorTipo(cls):
         from mamifero import cantidadMamiferos
         from ave import cantidadAves
         from anfibio import cantidadAnfibios

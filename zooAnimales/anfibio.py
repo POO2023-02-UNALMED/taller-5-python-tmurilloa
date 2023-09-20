@@ -22,7 +22,7 @@ class Anfibio(Animal):
     @classmethod
     def crearSalamandra(cls,nombre,edad,genero):
         salamandra = Anfibio(nombre,edad,"selva",genero,"negro y amarillo",False)
-        cls.ranas += 1
+        cls.salamandras += 1
         return salamandra
     
     def setColorPiel(self,colorPiel):
@@ -31,7 +31,7 @@ class Anfibio(Animal):
         return self._colorPiel
     def setVenenoso(self,venenoso):
         self._venenoso =  venenoso
-    def getVenenoso(self):
+    def isVenenoso(self):
         return self._venenoso
     def getListado(cls):
         return cls._listado
