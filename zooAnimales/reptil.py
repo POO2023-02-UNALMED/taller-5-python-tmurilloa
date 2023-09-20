@@ -1,4 +1,4 @@
-from animal import Animal
+from .animal import Animal
 class Reptil(Animal):
     _listado = []
     iguanas = 0
@@ -14,11 +14,13 @@ class Reptil(Animal):
         return len(cls._listado)
     def movimiento(self):
         return "reptar"
+    @classmethod
     def crearIguana(cls,nombre,edad,genero):
         iguana = Reptil(nombre,edad,"humedal",genero,"verde",3)
         cls.iguanas += 1
         return iguana
-    def crearSerpientes(cls,nombre,edad,genero):
+    @classmethod
+    def crearSerpiente(cls,nombre,edad,genero):
         serpiente = Reptil(nombre,edad,"jungla",genero,"blanco",1)
         cls.serpientes += 1
         return serpiente

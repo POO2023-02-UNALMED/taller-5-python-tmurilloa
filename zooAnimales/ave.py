@@ -1,4 +1,4 @@
-from animal import Animal
+from .animal import Animal
 class Ave(Animal):
     _listado = []
     halcones = 0
@@ -13,10 +13,12 @@ class Ave(Animal):
         return len(cls._listado)
     def movimiento(self):
         return "volar"
+    @classmethod
     def crearHalcon(cls,nombre,edad,genero):
         halcon = Ave(nombre,edad,"montanas",genero,"cafe glorioso")
         cls.halcones += 1
         return halcon
+    @classmethod
     def crearAguila(cls,nombre,edad,genero):
         aguila = Ave(nombre,edad,"montanas",genero,"blanco y amarillo")
         cls.aguilas += 1
