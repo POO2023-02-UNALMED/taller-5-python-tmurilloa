@@ -13,7 +13,7 @@ class Zoologico:
     def cantidadTotalAnimales(cls):
         totalAnimales = 0
         for i in range(len(cls._zonas)):
-            x = cls._zonas[i].cantidadAnimales()
+            x = len(cls._zonas[i])
             totalAnimales += x
         return totalAnimales
     
