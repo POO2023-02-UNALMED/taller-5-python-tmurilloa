@@ -4,6 +4,7 @@ class Zona:
         self._nombre = nombre
         self._zoo = zoo
 
+    @classmethod
     def agregarAnimales(cls,animal):
         cls._animales.append(animal)
     @classmethod

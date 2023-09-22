@@ -18,11 +18,11 @@ class Animal:
         return resultado
     @classmethod
     def totalPorTipo(cls):
-        from .mamifero import cantidadMamiferos
-        from .ave import cantidadAves
-        from .anfibio import cantidadAnfibios
-        from .reptil import cantidadReptiles
-        from .pez import cantidadPeces   
+        from mamifero import cantidadMamiferos
+        from ave import cantidadAves
+        from anfibio import cantidadAnfibios
+        from reptil import cantidadReptiles
+        from pez import cantidadPeces   
         resultado = f"Mamiferos : {cantidadMamiferos()}\nAves : {cantidadAves()}\nReptiles : {cantidadReptiles()}\nPeces : {cantidadPeces()}\nAnfibios : {cantidadAnfibios()}"
         return resultado
     
