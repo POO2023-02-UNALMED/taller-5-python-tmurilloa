@@ -10,7 +10,7 @@ class Anfibio(Animal):
         Anfibio._listado.append(self)
     
     @staticmethod
-    def cantidaAnfibios():
+    def cantidadAnfibios():
         return len(Anfibio._listado)
     @staticmethod
     def movimiento():
