@@ -1,4 +1,4 @@
-from .animal import Animal
+from zooAnimales.animal import Animal
 class Anfibio(Animal):
     _listado = []
     ranas = 0
@@ -9,10 +9,11 @@ class Anfibio(Animal):
         self._venenoso = venenoso
         Anfibio._listado.append(self)
     
-    @classmethod
-    def cantidaAnfibios(cls):
-        return len(cls._listado)
-    def movimiento(self):
+    @staticmethod
+    def cantidaAnfibios():
+        return len(Anfibio._listado)
+    @staticmethod
+    def movimiento():
         return "saltar"
     @classmethod
     def crearRana(cls,nombre,edad,genero):

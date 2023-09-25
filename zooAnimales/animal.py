@@ -1,4 +1,4 @@
-
+import zooAnimales
 class Animal:
     _totalAnimales = 0
     def __init__(self,nombre,edad,habitat,genero):
@@ -16,14 +16,9 @@ class Animal:
         if self._zona != None:
             resultado += f", la zona en la que me ubico es {self._zona}, en el {self._zona.getZoo()}"
         return resultado
-    @classmethod
-    def totalPorTipo(cls):
-        from zooAmimales.mamifero import cantidadMamiferos
-        from zooAnimales.ave import cantidadAves
-        from zooAnimales.anfibio import cantidadAnfibios
-        from zooAnimales.reptil import cantidadReptiles
-        from zooAnimales.pez import cantidadPeces   
-        resultado = f"Mamiferos : {cantidadMamiferos()}\nAves : {cantidadAves()}\nReptiles : {cantidadReptiles()}\nPeces : {cantidadPeces()}\nAnfibios : {cantidadAnfibios()}"
+    @staticmethod
+    def totalPorTipo():
+        resultado = f"Mamiferos : {zooAnimales.mamifero.Mamifero.cantidadMamiferos()}\nAves : {zooAnimales.ave.Ave.cantidadAves()}\nReptiles : {zooAnimales.reptil.Reptil.cantidadReptiles()}\nPeces : {zooAnimales.pez.Pez.cantidadPeces()}\nAnfibios : {zooAnimales.anfibio.Anfibio.cantidadAnfibios()}"
         return resultado
     
     def getNombre(self):
